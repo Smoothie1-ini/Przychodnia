@@ -24,10 +24,14 @@ namespace Przychodnia {
 		private: System::Windows::Forms::GroupBox^ groupBoxUser;
 	private: System::Windows::Forms::GroupBox^ groupBoxWorkHours;
 	private: System::Windows::Forms::GroupBox^ groupBox;
-	private: System::Windows::Forms::Button^ button4;
-	private: System::Windows::Forms::Button^ button3;
-	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ button1018;
+
+	private: System::Windows::Forms::Button^ button917;
+
+	private: System::Windows::Forms::Button^ button816;
+
+	private: System::Windows::Forms::Button^ button715;
+
 	private: System::Windows::Forms::TextBox^ textBoxSatE;
 
 	private: System::Windows::Forms::TextBox^ textBoxFriE;
@@ -122,8 +126,8 @@ namespace Przychodnia {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle7 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle8 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->tabControlChangePassword = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 			this->buttonChange = (gcnew System::Windows::Forms::Button());
@@ -136,10 +140,10 @@ namespace Przychodnia {
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->groupBoxWorkHours = (gcnew System::Windows::Forms::GroupBox());
 			this->groupBox = (gcnew System::Windows::Forms::GroupBox());
-			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button1018 = (gcnew System::Windows::Forms::Button());
+			this->button917 = (gcnew System::Windows::Forms::Button());
+			this->button816 = (gcnew System::Windows::Forms::Button());
+			this->button715 = (gcnew System::Windows::Forms::Button());
 			this->textBoxSatE = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxFriE = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxThuE = (gcnew System::Windows::Forms::TextBox());
@@ -333,51 +337,55 @@ namespace Przychodnia {
 			// 
 			// groupBox
 			// 
-			this->groupBox->Controls->Add(this->button4);
-			this->groupBox->Controls->Add(this->button3);
-			this->groupBox->Controls->Add(this->button2);
-			this->groupBox->Controls->Add(this->button1);
+			this->groupBox->Controls->Add(this->button1018);
+			this->groupBox->Controls->Add(this->button917);
+			this->groupBox->Controls->Add(this->button816);
+			this->groupBox->Controls->Add(this->button715);
 			this->groupBox->Location = System::Drawing::Point(316, 38);
 			this->groupBox->Name = L"groupBox";
 			this->groupBox->Size = System::Drawing::Size(100, 142);
 			this->groupBox->TabIndex = 39;
 			this->groupBox->TabStop = false;
 			// 
-			// button4
+			// button1018
 			// 
-			this->button4->Location = System::Drawing::Point(6, 106);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(88, 23);
-			this->button4->TabIndex = 3;
-			this->button4->Text = L"10:00 - 18:00";
-			this->button4->UseVisualStyleBackColor = true;
+			this->button1018->Location = System::Drawing::Point(6, 106);
+			this->button1018->Name = L"button1018";
+			this->button1018->Size = System::Drawing::Size(88, 23);
+			this->button1018->TabIndex = 3;
+			this->button1018->Text = L"10:00 - 18:00";
+			this->button1018->UseVisualStyleBackColor = true;
+			this->button1018->Click += gcnew System::EventHandler(this, &Aplikacja::button1018_Click);
 			// 
-			// button3
+			// button917
 			// 
-			this->button3->Location = System::Drawing::Point(6, 77);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(88, 23);
-			this->button3->TabIndex = 2;
-			this->button3->Text = L"9:00 - 17:00";
-			this->button3->UseVisualStyleBackColor = true;
+			this->button917->Location = System::Drawing::Point(6, 77);
+			this->button917->Name = L"button917";
+			this->button917->Size = System::Drawing::Size(88, 23);
+			this->button917->TabIndex = 2;
+			this->button917->Text = L"9:00 - 17:00";
+			this->button917->UseVisualStyleBackColor = true;
+			this->button917->Click += gcnew System::EventHandler(this, &Aplikacja::button917_Click);
 			// 
-			// button2
+			// button816
 			// 
-			this->button2->Location = System::Drawing::Point(6, 48);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(88, 23);
-			this->button2->TabIndex = 1;
-			this->button2->Text = L"8:00 - 16:00";
-			this->button2->UseVisualStyleBackColor = true;
+			this->button816->Location = System::Drawing::Point(6, 48);
+			this->button816->Name = L"button816";
+			this->button816->Size = System::Drawing::Size(88, 23);
+			this->button816->TabIndex = 1;
+			this->button816->Text = L"8:00 - 16:00";
+			this->button816->UseVisualStyleBackColor = true;
+			this->button816->Click += gcnew System::EventHandler(this, &Aplikacja::button816_Click);
 			// 
-			// button1
+			// button715
 			// 
-			this->button1->Location = System::Drawing::Point(6, 19);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(88, 23);
-			this->button1->TabIndex = 0;
-			this->button1->Text = L"7:00 - 15:00";
-			this->button1->UseVisualStyleBackColor = true;
+			this->button715->Location = System::Drawing::Point(6, 19);
+			this->button715->Name = L"button715";
+			this->button715->Size = System::Drawing::Size(88, 23);
+			this->button715->TabIndex = 0;
+			this->button715->Text = L"7:00 - 15:00";
+			this->button715->UseVisualStyleBackColor = true;
+			this->button715->Click += gcnew System::EventHandler(this, &Aplikacja::button715_Click);
 			// 
 			// textBoxSatE
 			// 
@@ -387,6 +395,7 @@ namespace Przychodnia {
 			this->textBoxSatE->Name = L"textBoxSatE";
 			this->textBoxSatE->Size = System::Drawing::Size(87, 26);
 			this->textBoxSatE->TabIndex = 38;
+			this->textBoxSatE->Text = L"00:00:00";
 			// 
 			// textBoxFriE
 			// 
@@ -396,6 +405,7 @@ namespace Przychodnia {
 			this->textBoxFriE->Name = L"textBoxFriE";
 			this->textBoxFriE->Size = System::Drawing::Size(87, 26);
 			this->textBoxFriE->TabIndex = 37;
+			this->textBoxFriE->Text = L"00:00:00";
 			// 
 			// textBoxThuE
 			// 
@@ -405,6 +415,7 @@ namespace Przychodnia {
 			this->textBoxThuE->Name = L"textBoxThuE";
 			this->textBoxThuE->Size = System::Drawing::Size(87, 26);
 			this->textBoxThuE->TabIndex = 36;
+			this->textBoxThuE->Text = L"00:00:00";
 			// 
 			// textBoxWedE
 			// 
@@ -414,6 +425,7 @@ namespace Przychodnia {
 			this->textBoxWedE->Name = L"textBoxWedE";
 			this->textBoxWedE->Size = System::Drawing::Size(87, 26);
 			this->textBoxWedE->TabIndex = 35;
+			this->textBoxWedE->Text = L"00:00:00";
 			// 
 			// textBoxTueE
 			// 
@@ -423,6 +435,7 @@ namespace Przychodnia {
 			this->textBoxTueE->Name = L"textBoxTueE";
 			this->textBoxTueE->Size = System::Drawing::Size(87, 26);
 			this->textBoxTueE->TabIndex = 34;
+			this->textBoxTueE->Text = L"00:00:00";
 			// 
 			// textBoxMonE
 			// 
@@ -432,6 +445,7 @@ namespace Przychodnia {
 			this->textBoxMonE->Name = L"textBoxMonE";
 			this->textBoxMonE->Size = System::Drawing::Size(87, 26);
 			this->textBoxMonE->TabIndex = 33;
+			this->textBoxMonE->Text = L"00:00:00";
 			// 
 			// textBoxSatS
 			// 
@@ -441,6 +455,7 @@ namespace Przychodnia {
 			this->textBoxSatS->Name = L"textBoxSatS";
 			this->textBoxSatS->Size = System::Drawing::Size(87, 26);
 			this->textBoxSatS->TabIndex = 32;
+			this->textBoxSatS->Text = L"00:00:00";
 			// 
 			// textBoxFriS
 			// 
@@ -450,6 +465,7 @@ namespace Przychodnia {
 			this->textBoxFriS->Name = L"textBoxFriS";
 			this->textBoxFriS->Size = System::Drawing::Size(87, 26);
 			this->textBoxFriS->TabIndex = 31;
+			this->textBoxFriS->Text = L"00:00:00";
 			// 
 			// textBoxThuS
 			// 
@@ -459,6 +475,7 @@ namespace Przychodnia {
 			this->textBoxThuS->Name = L"textBoxThuS";
 			this->textBoxThuS->Size = System::Drawing::Size(87, 26);
 			this->textBoxThuS->TabIndex = 30;
+			this->textBoxThuS->Text = L"00:00:00";
 			// 
 			// textBoxWedS
 			// 
@@ -468,6 +485,7 @@ namespace Przychodnia {
 			this->textBoxWedS->Name = L"textBoxWedS";
 			this->textBoxWedS->Size = System::Drawing::Size(87, 26);
 			this->textBoxWedS->TabIndex = 29;
+			this->textBoxWedS->Text = L"00:00:00";
 			// 
 			// textBoxTueS
 			// 
@@ -477,6 +495,7 @@ namespace Przychodnia {
 			this->textBoxTueS->Name = L"textBoxTueS";
 			this->textBoxTueS->Size = System::Drawing::Size(87, 26);
 			this->textBoxTueS->TabIndex = 28;
+			this->textBoxTueS->Text = L"00:00:00";
 			// 
 			// textBoxMonS
 			// 
@@ -486,6 +505,7 @@ namespace Przychodnia {
 			this->textBoxMonS->Name = L"textBoxMonS";
 			this->textBoxMonS->Size = System::Drawing::Size(87, 26);
 			this->textBoxMonS->TabIndex = 27;
+			this->textBoxMonS->Text = L"00:00:00";
 			// 
 			// label11
 			// 
@@ -728,25 +748,25 @@ namespace Przychodnia {
 			// 
 			this->dataGridViewUsers->AllowUserToAddRows = false;
 			this->dataGridViewUsers->AllowUserToDeleteRows = false;
-			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle3->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle7->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle7->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(238)));
-			dataGridViewCellStyle3->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dataGridViewUsers->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle7->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle7->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle7->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle7->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridViewUsers->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
 			this->dataGridViewUsers->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle4->BackColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle8->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle8->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(238)));
-			dataGridViewCellStyle4->ForeColor = System::Drawing::SystemColors::ControlText;
-			dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->dataGridViewUsers->DefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle8->ForeColor = System::Drawing::SystemColors::ControlText;
+			dataGridViewCellStyle8->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle8->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle8->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->dataGridViewUsers->DefaultCellStyle = dataGridViewCellStyle8;
 			this->dataGridViewUsers->Location = System::Drawing::Point(444, 6);
 			this->dataGridViewUsers->Name = L"dataGridViewUsers";
 			this->dataGridViewUsers->RowHeadersVisible = false;
@@ -904,7 +924,6 @@ namespace Przychodnia {
 				return;
 			}
 			else {
-				MessageBox::Show("Dane wprowadzone poprawnie.");
 				if (checkBoxWorker->Checked) {
 					pracownik_typ = 1;
 				}
@@ -978,7 +997,6 @@ namespace Przychodnia {
 				return;
 			}
 			else {
-				MessageBox::Show("Dane edytowane poprawnie.");
 				if (checkBoxWorker->Checked) {
 					pracownik_typ = 1;
 				}
@@ -992,18 +1010,67 @@ namespace Przychodnia {
 			MySqlTransaction^ transaction = connection->BeginTransaction(IsolationLevel::ReadCommitted);
 			queryExec->Connection = connection;
 			queryExec->Transaction = transaction;
-			//here
 			try {
-				String^ query = "update przychodnia.user "
-					"set user_name = '" + textBoxName->Text + "' "
-					", user_surname = '" + textBoxSurname->Text + "' "
-					", user_login = '" + textBoxLogin->Text + "' "
-					", user_password = '" + textBoxPassword->Text + "' "
-					", user_worker = " + pracownik_typ + " "
-					" where user_id = "+ rekord_id + ";";
-				queryExec->CommandText = query;
+				String^ querySelect = "select * "
+										"from przychodnia.workHours "
+										"where workHours_user_id = " + rekord_id +";";
+				queryExec->CommandText = querySelect;
+				MySqlDataReader^ result = queryExec->ExecuteReader();
+				result->Close();
+				String^ queryUpdate = "update przychodnia.user "
+										"set user_name = '" + textBoxName->Text + "' "
+										", user_surname = '" + textBoxSurname->Text + "' "
+										", user_login = '" + textBoxLogin->Text + "' "
+										", user_password = '" + textBoxPassword->Text + "' "
+										", user_worker = " + pracownik_typ + " "
+										" where user_id = "+ rekord_id + ";";
+				queryExec->CommandText = queryUpdate;
 				queryExec->ExecuteNonQuery();
+
+				if (result->HasRows == true && checkBoxWorker->Checked == true) {
+					String^ queryUpdate = "update przychodnia.workHours "
+						"set workHours_monday_start = '" + textBoxMonS->Text + "' "
+						", workHours_monday_end = '" + textBoxMonE->Text + "' "
+						", workHours_tuesday_start = '" + textBoxTueS->Text + "' "
+						", workHours_tuesday_end = '" + textBoxTueE->Text + "' "
+						", workHours_wednesday_start = '" + textBoxWedS->Text + "' "
+						", workHours_wednesday_end = '" + textBoxWedE->Text + "' "
+						", workHours_thursday_start = '" + textBoxThuS->Text + "' "
+						", workHours_thursday_end = '" + textBoxThuE->Text + "' "
+						", workHours_friday_start = '" + textBoxFriS->Text + "' "
+						", workHours_friday_end = '" + textBoxFriE->Text + "' "
+						", workHours_saturday_start = '" + textBoxSatS->Text + "' "
+						", workHours_saturday_end = '" + textBoxSatE->Text + "' "
+						"where workHours_user_id = "+ rekord_id +";";
+					queryExec->CommandText = queryUpdate;
+					queryExec->ExecuteNonQuery();
+				}
+				else if (checkBoxWorker->Checked == true){
+					String^ queryWorkHours = "insert into przychodnia.workhours "
+						"set workHours_user_id = "+ rekord_id +" "
+						", workHours_monday_start = '" + textBoxMonS->Text + "' "
+						", workHours_monday_end = '" + textBoxMonE->Text + "' "
+						", workHours_tuesday_start = '" + textBoxTueS->Text + "' "
+						", workHours_tuesday_end = '" + textBoxTueE->Text + "' "
+						", workHours_wednesday_start = '" + textBoxWedS->Text + "' "
+						", workHours_wednesday_end = '" + textBoxWedE->Text + "' "
+						", workHours_thursday_start = '" + textBoxThuS->Text + "' "
+						", workHours_thursday_end = '" + textBoxThuE->Text + "' "
+						", workHours_friday_start = '" + textBoxFriS->Text + "' "
+						", workHours_friday_end = '" + textBoxFriE->Text + "' "
+						", workHours_saturday_start = '" + textBoxSatS->Text + "' "
+						", workHours_saturday_end = '" + textBoxSatE->Text + "'; ";
+					queryExec->CommandText = queryWorkHours;
+					queryExec->ExecuteNonQuery();
+				}
+
 				transaction->Commit();
+				if (checkBoxWorker->Checked) {
+					MessageBox::Show("Pracownik " + textBoxLogin->Text + " zosta³ edytowany");
+				}
+				else {
+					MessageBox::Show("U¿ytkownik " + textBoxLogin->Text + " zosta³ edytowany");
+				}
 			}
 			catch (Exception^ ex) {
 				MessageBox::Show(ex->Message);
@@ -1095,6 +1162,17 @@ namespace Przychodnia {
 				checkBoxWorker->Checked = false;
 			}
 		}
+
+		private: System::Void setWorkHours(int hour) {
+			array<TextBox^>^ starts = { textBoxMonS, textBoxTueS, textBoxWedS, textBoxThuS, textBoxFriS, textBoxSatS };
+			array<TextBox^>^ ends = { textBoxMonE, textBoxTueE, textBoxWedE, textBoxThuE, textBoxFriE, textBoxSatE };
+
+			for (int i = 0; i <= 5; i++) {
+				starts[i]->Text = hour + ":00";
+				ends[i]->Text = hour + 8 + ":00";
+			}
+		}
+
 		private: System::Void checkBoxWorker_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
 			if (checkBoxWorker->Checked) {
 				groupBoxWorkHours->Visible = true;
@@ -1102,6 +1180,19 @@ namespace Przychodnia {
 			else {
 				groupBoxWorkHours->Visible = false;
 			}
+		}
+
+		private: System::Void button715_Click(System::Object^ sender, System::EventArgs^ e) {
+			setWorkHours(7);
+		}
+		private: System::Void button816_Click(System::Object^ sender, System::EventArgs^ e) {
+			setWorkHours(8);
+		}
+		private: System::Void button917_Click(System::Object^ sender, System::EventArgs^ e) {
+			setWorkHours(9);
+		}
+		private: System::Void button1018_Click(System::Object^ sender, System::EventArgs^ e) {
+			setWorkHours(10);
 		}
 	};
 }
