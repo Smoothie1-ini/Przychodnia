@@ -21,6 +21,7 @@ namespace Przychodnia {
 		public:
 		int user_id;
 		int rekord_id;
+		int zabiegRekord_id;
 		private: System::Windows::Forms::GroupBox^ groupBoxUser;
 	private: System::Windows::Forms::GroupBox^ groupBoxWorkHours;
 	private: System::Windows::Forms::GroupBox^ groupBox;
@@ -62,6 +63,29 @@ namespace Przychodnia {
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::TabPage^ tabPage3;
+	private: System::Windows::Forms::GroupBox^ groupBoxZabieg;
+
+	private: System::Windows::Forms::TextBox^ textBoxZabieg;
+
+	private: System::Windows::Forms::Label^ label18;
+	private: System::Windows::Forms::Label^ labelOpis;
+	private: System::Windows::Forms::Label^ labelCena;
+	private: System::Windows::Forms::Label^ labelCzasTrwania;
+	private: System::Windows::Forms::TextBox^ textBoxCena;
+	private: System::Windows::Forms::TextBox^ textBoxCzasTrwania;
+	private: System::Windows::Forms::Button^ buttonAddZabieg;
+	private: System::Windows::Forms::Button^ buttonEditZabieg;
+	private: System::Windows::Forms::Button^ buttonDeleteZabieg;
+	private: System::Windows::Forms::TextBox^ textBoxSearchZabieg;
+
+
+
+
+	private: System::Windows::Forms::Button^ buttonSearchZabieg;
+
+	private: System::Windows::Forms::DataGridView^ dataGridViewZabiegi;
+	private: System::Windows::Forms::RichTextBox^ richTextBoxOpis;
 	public:
 		int pracownik_typ;
 
@@ -108,7 +132,9 @@ namespace Przychodnia {
 			private: System::Windows::Forms::Label^ label3;
 			private: System::Windows::Forms::Label^ label2;
 			private: System::Windows::Forms::Label^ label1;
-			private: System::Windows::Forms::TabPage^ tabPage2;
+	private: System::Windows::Forms::TabPage^ TabPage2;
+
+
 			private: System::Windows::Forms::TextBox^ textBoxPassword;
 			private: System::Windows::Forms::Label^ label4;
 		#pragma endregion
@@ -126,8 +152,10 @@ namespace Przychodnia {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle7 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle8 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->tabControlChangePassword = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 			this->buttonChange = (gcnew System::Windows::Forms::Button());
@@ -137,7 +165,7 @@ namespace Przychodnia {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
+			this->TabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->groupBoxWorkHours = (gcnew System::Windows::Forms::GroupBox());
 			this->groupBox = (gcnew System::Windows::Forms::GroupBox());
 			this->button1018 = (gcnew System::Windows::Forms::Button());
@@ -178,19 +206,39 @@ namespace Przychodnia {
 			this->textBoxSearch = (gcnew System::Windows::Forms::TextBox());
 			this->buttonSearch = (gcnew System::Windows::Forms::Button());
 			this->dataGridViewUsers = (gcnew System::Windows::Forms::DataGridView());
+			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
+			this->groupBoxZabieg = (gcnew System::Windows::Forms::GroupBox());
+			this->richTextBoxOpis = (gcnew System::Windows::Forms::RichTextBox());
+			this->textBoxZabieg = (gcnew System::Windows::Forms::TextBox());
+			this->label18 = (gcnew System::Windows::Forms::Label());
+			this->labelOpis = (gcnew System::Windows::Forms::Label());
+			this->labelCena = (gcnew System::Windows::Forms::Label());
+			this->labelCzasTrwania = (gcnew System::Windows::Forms::Label());
+			this->textBoxCena = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxCzasTrwania = (gcnew System::Windows::Forms::TextBox());
+			this->buttonAddZabieg = (gcnew System::Windows::Forms::Button());
+			this->buttonEditZabieg = (gcnew System::Windows::Forms::Button());
+			this->buttonDeleteZabieg = (gcnew System::Windows::Forms::Button());
+			this->textBoxSearchZabieg = (gcnew System::Windows::Forms::TextBox());
+			this->buttonSearchZabieg = (gcnew System::Windows::Forms::Button());
+			this->dataGridViewZabiegi = (gcnew System::Windows::Forms::DataGridView());
 			this->tabControlChangePassword->SuspendLayout();
 			this->tabPage1->SuspendLayout();
-			this->tabPage2->SuspendLayout();
+			this->TabPage2->SuspendLayout();
 			this->groupBoxWorkHours->SuspendLayout();
 			this->groupBox->SuspendLayout();
 			this->groupBoxUser->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewUsers))->BeginInit();
+			this->tabPage3->SuspendLayout();
+			this->groupBoxZabieg->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewZabiegi))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// tabControlChangePassword
 			// 
 			this->tabControlChangePassword->Controls->Add(this->tabPage1);
-			this->tabControlChangePassword->Controls->Add(this->tabPage2);
+			this->tabControlChangePassword->Controls->Add(this->TabPage2);
+			this->tabControlChangePassword->Controls->Add(this->tabPage3);
 			this->tabControlChangePassword->Location = System::Drawing::Point(12, 12);
 			this->tabControlChangePassword->Name = L"tabControlChangePassword";
 			this->tabControlChangePassword->SelectedIndex = 0;
@@ -288,23 +336,23 @@ namespace Przychodnia {
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Stare has³o:";
 			// 
-			// tabPage2
+			// TabPage2
 			// 
-			this->tabPage2->Controls->Add(this->groupBoxWorkHours);
-			this->tabPage2->Controls->Add(this->groupBoxUser);
-			this->tabPage2->Controls->Add(this->buttonAdd);
-			this->tabPage2->Controls->Add(this->buttonEdit);
-			this->tabPage2->Controls->Add(this->buttonDelete);
-			this->tabPage2->Controls->Add(this->textBoxSearch);
-			this->tabPage2->Controls->Add(this->buttonSearch);
-			this->tabPage2->Controls->Add(this->dataGridViewUsers);
-			this->tabPage2->Location = System::Drawing::Point(4, 22);
-			this->tabPage2->Name = L"tabPage2";
-			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage2->Size = System::Drawing::Size(858, 535);
-			this->tabPage2->TabIndex = 1;
-			this->tabPage2->Text = L"tabPageUsers";
-			this->tabPage2->UseVisualStyleBackColor = true;
+			this->TabPage2->Controls->Add(this->groupBoxWorkHours);
+			this->TabPage2->Controls->Add(this->groupBoxUser);
+			this->TabPage2->Controls->Add(this->buttonAdd);
+			this->TabPage2->Controls->Add(this->buttonEdit);
+			this->TabPage2->Controls->Add(this->buttonDelete);
+			this->TabPage2->Controls->Add(this->textBoxSearch);
+			this->TabPage2->Controls->Add(this->buttonSearch);
+			this->TabPage2->Controls->Add(this->dataGridViewUsers);
+			this->TabPage2->Location = System::Drawing::Point(4, 22);
+			this->TabPage2->Name = L"TabPage2";
+			this->TabPage2->Padding = System::Windows::Forms::Padding(3);
+			this->TabPage2->Size = System::Drawing::Size(858, 535);
+			this->TabPage2->TabIndex = 1;
+			this->TabPage2->Text = L"U¿ytkownicy";
+			this->TabPage2->UseVisualStyleBackColor = true;
 			// 
 			// groupBoxWorkHours
 			// 
@@ -748,25 +796,25 @@ namespace Przychodnia {
 			// 
 			this->dataGridViewUsers->AllowUserToAddRows = false;
 			this->dataGridViewUsers->AllowUserToDeleteRows = false;
-			dataGridViewCellStyle7->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle7->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(238)));
-			dataGridViewCellStyle7->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle7->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle7->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle7->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dataGridViewUsers->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridViewUsers->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this->dataGridViewUsers->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			dataGridViewCellStyle8->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle8->BackColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(238)));
-			dataGridViewCellStyle8->ForeColor = System::Drawing::SystemColors::ControlText;
-			dataGridViewCellStyle8->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle8->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle8->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->dataGridViewUsers->DefaultCellStyle = dataGridViewCellStyle8;
+			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::ControlText;
+			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->dataGridViewUsers->DefaultCellStyle = dataGridViewCellStyle2;
 			this->dataGridViewUsers->Location = System::Drawing::Point(444, 6);
 			this->dataGridViewUsers->Name = L"dataGridViewUsers";
 			this->dataGridViewUsers->RowHeadersVisible = false;
@@ -774,6 +822,212 @@ namespace Przychodnia {
 			this->dataGridViewUsers->Size = System::Drawing::Size(408, 519);
 			this->dataGridViewUsers->TabIndex = 0;
 			this->dataGridViewUsers->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Aplikacja::dataGridViewUsers_CellClick);
+			// 
+			// tabPage3
+			// 
+			this->tabPage3->Controls->Add(this->groupBoxZabieg);
+			this->tabPage3->Controls->Add(this->buttonAddZabieg);
+			this->tabPage3->Controls->Add(this->buttonEditZabieg);
+			this->tabPage3->Controls->Add(this->buttonDeleteZabieg);
+			this->tabPage3->Controls->Add(this->textBoxSearchZabieg);
+			this->tabPage3->Controls->Add(this->buttonSearchZabieg);
+			this->tabPage3->Controls->Add(this->dataGridViewZabiegi);
+			this->tabPage3->Location = System::Drawing::Point(4, 22);
+			this->tabPage3->Name = L"tabPage3";
+			this->tabPage3->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage3->Size = System::Drawing::Size(858, 535);
+			this->tabPage3->TabIndex = 2;
+			this->tabPage3->Text = L"Zabiegi";
+			this->tabPage3->UseVisualStyleBackColor = true;
+			// 
+			// groupBoxZabieg
+			// 
+			this->groupBoxZabieg->Controls->Add(this->richTextBoxOpis);
+			this->groupBoxZabieg->Controls->Add(this->textBoxZabieg);
+			this->groupBoxZabieg->Controls->Add(this->label18);
+			this->groupBoxZabieg->Controls->Add(this->labelOpis);
+			this->groupBoxZabieg->Controls->Add(this->labelCena);
+			this->groupBoxZabieg->Controls->Add(this->labelCzasTrwania);
+			this->groupBoxZabieg->Controls->Add(this->textBoxCena);
+			this->groupBoxZabieg->Controls->Add(this->textBoxCzasTrwania);
+			this->groupBoxZabieg->Location = System::Drawing::Point(11, 55);
+			this->groupBoxZabieg->Name = L"groupBoxZabieg";
+			this->groupBoxZabieg->Size = System::Drawing::Size(422, 432);
+			this->groupBoxZabieg->TabIndex = 23;
+			this->groupBoxZabieg->TabStop = false;
+			this->groupBoxZabieg->Text = L"Zabieg";
+			// 
+			// richTextBoxOpis
+			// 
+			this->richTextBoxOpis->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->richTextBoxOpis->Location = System::Drawing::Point(18, 168);
+			this->richTextBoxOpis->Name = L"richTextBoxOpis";
+			this->richTextBoxOpis->Size = System::Drawing::Size(392, 247);
+			this->richTextBoxOpis->TabIndex = 15;
+			this->richTextBoxOpis->Text = L"";
+			// 
+			// textBoxZabieg
+			// 
+			this->textBoxZabieg->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->textBoxZabieg->Location = System::Drawing::Point(120, 19);
+			this->textBoxZabieg->Name = L"textBoxZabieg";
+			this->textBoxZabieg->Size = System::Drawing::Size(290, 26);
+			this->textBoxZabieg->TabIndex = 6;
+			// 
+			// label18
+			// 
+			this->label18->AutoSize = true;
+			this->label18->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->label18->Location = System::Drawing::Point(14, 22);
+			this->label18->Name = L"label18";
+			this->label18->Size = System::Drawing::Size(65, 20);
+			this->label18->TabIndex = 3;
+			this->label18->Text = L"Nazwa: ";
+			// 
+			// labelOpis
+			// 
+			this->labelOpis->AutoSize = true;
+			this->labelOpis->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->labelOpis->Location = System::Drawing::Point(14, 145);
+			this->labelOpis->Name = L"labelOpis";
+			this->labelOpis->Size = System::Drawing::Size(49, 20);
+			this->labelOpis->TabIndex = 13;
+			this->labelOpis->Text = L"Opis: ";
+			// 
+			// labelCena
+			// 
+			this->labelCena->AutoSize = true;
+			this->labelCena->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->labelCena->Location = System::Drawing::Point(14, 63);
+			this->labelCena->Name = L"labelCena";
+			this->labelCena->Size = System::Drawing::Size(55, 20);
+			this->labelCena->TabIndex = 4;
+			this->labelCena->Text = L"Cena: ";
+			// 
+			// labelCzasTrwania
+			// 
+			this->labelCzasTrwania->AutoSize = true;
+			this->labelCzasTrwania->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->labelCzasTrwania->Location = System::Drawing::Point(14, 104);
+			this->labelCzasTrwania->Name = L"labelCzasTrwania";
+			this->labelCzasTrwania->Size = System::Drawing::Size(104, 20);
+			this->labelCzasTrwania->TabIndex = 5;
+			this->labelCzasTrwania->Text = L"Czas trwania:";
+			// 
+			// textBoxCena
+			// 
+			this->textBoxCena->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->textBoxCena->Location = System::Drawing::Point(120, 60);
+			this->textBoxCena->Name = L"textBoxCena";
+			this->textBoxCena->Size = System::Drawing::Size(137, 26);
+			this->textBoxCena->TabIndex = 7;
+			// 
+			// textBoxCzasTrwania
+			// 
+			this->textBoxCzasTrwania->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->textBoxCzasTrwania->Location = System::Drawing::Point(120, 101);
+			this->textBoxCzasTrwania->Name = L"textBoxCzasTrwania";
+			this->textBoxCzasTrwania->Size = System::Drawing::Size(137, 26);
+			this->textBoxCzasTrwania->TabIndex = 8;
+			this->textBoxCzasTrwania->Text = L"00:00:00";
+			// 
+			// buttonAddZabieg
+			// 
+			this->buttonAddZabieg->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->buttonAddZabieg->Location = System::Drawing::Point(11, 493);
+			this->buttonAddZabieg->Name = L"buttonAddZabieg";
+			this->buttonAddZabieg->Size = System::Drawing::Size(100, 34);
+			this->buttonAddZabieg->TabIndex = 22;
+			this->buttonAddZabieg->Text = L"Dodaj";
+			this->buttonAddZabieg->UseVisualStyleBackColor = true;
+			this->buttonAddZabieg->Click += gcnew System::EventHandler(this, &Aplikacja::buttonAddZabieg_Click);
+			// 
+			// buttonEditZabieg
+			// 
+			this->buttonEditZabieg->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->buttonEditZabieg->Location = System::Drawing::Point(168, 493);
+			this->buttonEditZabieg->Name = L"buttonEditZabieg";
+			this->buttonEditZabieg->Size = System::Drawing::Size(100, 34);
+			this->buttonEditZabieg->TabIndex = 21;
+			this->buttonEditZabieg->Text = L"Edytuj";
+			this->buttonEditZabieg->UseVisualStyleBackColor = true;
+			this->buttonEditZabieg->Visible = false;
+			this->buttonEditZabieg->Click += gcnew System::EventHandler(this, &Aplikacja::buttonEditZabieg_Click);
+			// 
+			// buttonDeleteZabieg
+			// 
+			this->buttonDeleteZabieg->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->buttonDeleteZabieg->Location = System::Drawing::Point(321, 493);
+			this->buttonDeleteZabieg->Name = L"buttonDeleteZabieg";
+			this->buttonDeleteZabieg->Size = System::Drawing::Size(100, 34);
+			this->buttonDeleteZabieg->TabIndex = 20;
+			this->buttonDeleteZabieg->Text = L"Usuñ:";
+			this->buttonDeleteZabieg->UseVisualStyleBackColor = true;
+			this->buttonDeleteZabieg->Visible = false;
+			this->buttonDeleteZabieg->Click += gcnew System::EventHandler(this, &Aplikacja::buttonDeleteZabieg_Click);
+			// 
+			// textBoxSearchZabieg
+			// 
+			this->textBoxSearchZabieg->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(238)));
+			this->textBoxSearchZabieg->Location = System::Drawing::Point(11, 19);
+			this->textBoxSearchZabieg->Name = L"textBoxSearchZabieg";
+			this->textBoxSearchZabieg->Size = System::Drawing::Size(316, 26);
+			this->textBoxSearchZabieg->TabIndex = 19;
+			// 
+			// buttonSearchZabieg
+			// 
+			this->buttonSearchZabieg->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->buttonSearchZabieg->Location = System::Drawing::Point(333, 15);
+			this->buttonSearchZabieg->Name = L"buttonSearchZabieg";
+			this->buttonSearchZabieg->Size = System::Drawing::Size(100, 34);
+			this->buttonSearchZabieg->TabIndex = 18;
+			this->buttonSearchZabieg->Text = L"Szukaj";
+			this->buttonSearchZabieg->UseVisualStyleBackColor = true;
+			this->buttonSearchZabieg->Click += gcnew System::EventHandler(this, &Aplikacja::buttonSearchZabieg_Click);
+			// 
+			// dataGridViewZabiegi
+			// 
+			this->dataGridViewZabiegi->AllowUserToAddRows = false;
+			this->dataGridViewZabiegi->AllowUserToDeleteRows = false;
+			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle3->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(238)));
+			dataGridViewCellStyle3->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridViewZabiegi->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+			this->dataGridViewZabiegi->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle4->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(238)));
+			dataGridViewCellStyle4->ForeColor = System::Drawing::SystemColors::ControlText;
+			dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->dataGridViewZabiegi->DefaultCellStyle = dataGridViewCellStyle4;
+			this->dataGridViewZabiegi->Location = System::Drawing::Point(439, 8);
+			this->dataGridViewZabiegi->Name = L"dataGridViewZabiegi";
+			this->dataGridViewZabiegi->RowHeadersVisible = false;
+			this->dataGridViewZabiegi->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
+			this->dataGridViewZabiegi->Size = System::Drawing::Size(408, 519);
+			this->dataGridViewZabiegi->TabIndex = 17;
+			this->dataGridViewZabiegi->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Aplikacja::dataGridViewZabiegi_CellClick);
 			// 
 			// Aplikacja
 			// 
@@ -787,14 +1041,19 @@ namespace Przychodnia {
 			this->tabControlChangePassword->ResumeLayout(false);
 			this->tabPage1->ResumeLayout(false);
 			this->tabPage1->PerformLayout();
-			this->tabPage2->ResumeLayout(false);
-			this->tabPage2->PerformLayout();
+			this->TabPage2->ResumeLayout(false);
+			this->TabPage2->PerformLayout();
 			this->groupBoxWorkHours->ResumeLayout(false);
 			this->groupBoxWorkHours->PerformLayout();
 			this->groupBox->ResumeLayout(false);
 			this->groupBoxUser->ResumeLayout(false);
 			this->groupBoxUser->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewUsers))->EndInit();
+			this->tabPage3->ResumeLayout(false);
+			this->tabPage3->PerformLayout();
+			this->groupBoxZabieg->ResumeLayout(false);
+			this->groupBoxZabieg->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewZabiegi))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -810,6 +1069,7 @@ namespace Przychodnia {
 		}
 		private: System::Void Aplikacja_Load(System::Object^ sender, System::EventArgs^ e) {
 			refreshDGV();
+			refreshDGVZabiegi();
 		}
 
 		private: System::Void textBoxOldPassword_TextChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -1193,6 +1453,176 @@ namespace Przychodnia {
 		}
 		private: System::Void button1018_Click(System::Object^ sender, System::EventArgs^ e) {
 			setWorkHours(10);
+		}
+
+		//ZABIEGI
+
+		private: System::Void buttonSearchZabieg_Click(System::Object^ sender, System::EventArgs^ e) {
+			MySqlConnection^ connection = gcnew MySqlConnection(connectionString);
+			String^ query = "select procedure_id, procedure_name as Nazwa, procedure_price as Cena, procedure_duration as 'Czas trwania', procedure_description as Opis "
+							"from przychodnia.procedure "
+							"where concat(procedure_name, ' ', procedure_description) like '%"+ textBoxSearchZabieg->Text +"%'; ";
+			MySqlCommand^ queryExec = gcnew MySqlCommand(query, connection);
+			try {
+				connection->Open();
+				MySqlDataAdapter^ adapter = gcnew MySqlDataAdapter();
+				adapter->SelectCommand = queryExec;
+				DataTable^ dt = gcnew DataTable();
+				adapter->Fill(dt);
+				BindingSource^ source = gcnew BindingSource();
+				source->DataSource = dt;
+				dataGridViewZabiegi->DataSource = source;
+			}
+			catch (Exception^ ex) {
+				MessageBox::Show(ex->Message);
+			}
+			finally {
+				connection->Close();
+			}
+			dataGridViewZabiegi->Columns[0]->Visible = false;
+		}
+
+		private: System::Void buttonAddZabieg_Click(System::Object^ sender, System::EventArgs^ e) {
+			if (textBoxZabieg->Text->Length < 3 || Convert::ToDecimal(textBoxCena->Text) < 0) {
+				MessageBox::Show("Uzupe³nij dane.");
+				return;
+			}
+
+			MySqlConnection^ connection = gcnew MySqlConnection(connectionString);
+			MySqlCommand^ queryExec = connection->CreateCommand();
+			connection->Open();
+			MySqlTransaction^ transaction = connection->BeginTransaction(IsolationLevel::ReadCommitted);
+			queryExec->Connection = connection;
+			queryExec->Transaction = transaction;
+
+			try {
+				String^ queryZabieg = "insert into przychodnia.procedure "
+									"set procedure_name = '" + textBoxZabieg->Text + "' "
+									", procedure_price = " + Convert::ToDecimal(textBoxCena->Text) + " "
+									", procedure_duration = '" + textBoxLogin->Text + "' "
+									", procedure_description = '" + richTextBoxOpis->Text + "'; ";
+				queryExec->CommandText = queryZabieg;
+				queryExec->ExecuteNonQuery();
+				transaction->Commit();
+
+				MessageBox::Show("Zabieg " + textBoxZabieg->Text + " zosta³ dodany");
+			}
+			catch (Exception^ ex) {
+				MessageBox::Show(ex->Message);
+				transaction->Rollback();
+			}
+			finally {
+				connection->Close();
+				clearControls(groupBoxZabieg);
+				richTextBoxOpis->Text = "";
+				refreshDGVZabiegi();
+			}
+		}
+
+		private: System::Void buttonEditZabieg_Click(System::Object^ sender, System::EventArgs^ e) {
+			if (textBoxZabieg->Text->Length < 3 || Convert::ToDecimal(textBoxCena->Text) < 0) {
+				MessageBox::Show("Uzupe³nij dane.");
+				return;
+			}
+			MySqlConnection^ connection = gcnew MySqlConnection(connectionString);
+			MySqlCommand^ queryExec = connection->CreateCommand();
+			connection->Open();
+			MySqlTransaction^ transaction = connection->BeginTransaction(IsolationLevel::ReadCommitted);
+			queryExec->Connection = connection;
+			queryExec->Transaction = transaction;
+			try {
+				String^ querySelect = "select * "
+									"from przychodnia.procedure "
+									"where procedure_id = " + zabiegRekord_id + ";";
+				queryExec->CommandText = querySelect;
+				MySqlDataReader^ result = queryExec->ExecuteReader();
+				result->Close();
+				String^ queryUpdate = "update przychodnia.procedure "
+									"set procedure_name = '" + textBoxZabieg->Text + "' "
+									", procedure_price = " + Convert::ToDecimal(textBoxCena->Text) + " "
+									", procedure_duration = '" + textBoxCzasTrwania->Text + "' "
+									", procedure_description = '" + richTextBoxOpis->Text + "' "
+									" where procedure_id = " + zabiegRekord_id + ";";
+				queryExec->CommandText = queryUpdate;
+				queryExec->ExecuteNonQuery();
+				transaction->Commit();
+
+				MessageBox::Show("Zabieg " + textBoxZabieg->Text + " zosta³ edytowany.");
+			}
+			catch (Exception^ ex) {
+				MessageBox::Show(ex->Message);
+				transaction->Rollback();
+			}
+			finally {
+				connection->Close();
+				clearControls(groupBoxZabieg);
+				refreshDGVZabiegi();
+			}
+		}
+
+		private: System::Void buttonDeleteZabieg_Click(System::Object^ sender, System::EventArgs^ e) {
+			if (MessageBox::Show("Czy na pewno chcesz usun¹æ zabieg?", "Uwaga", MessageBoxButtons::YesNo, MessageBoxIcon::Question) == System::Windows::Forms::DialogResult::No) {
+				return;
+			}
+			MySqlConnection^ connection = gcnew MySqlConnection(connectionString);
+			MySqlCommand^ queryExec = connection->CreateCommand();
+			connection->Open();
+			MySqlTransaction^ transaction = connection->BeginTransaction(IsolationLevel::ReadCommitted);
+			queryExec->Connection = connection;
+			queryExec->Transaction = transaction;
+			try {
+				String^ queryUser = "delete from przychodnia.procedure "
+									"where procedure_id = " + zabiegRekord_id + "; ";
+				queryExec->CommandText = queryUser;
+				queryExec->ExecuteNonQuery();
+				transaction->Commit();
+				MessageBox::Show("Zabieg zosta³ usuniêty.");
+			}
+			catch (Exception^ ex) {
+				MessageBox::Show(ex->Message);
+				transaction->Rollback();
+			}
+			finally {
+				connection->Close();
+				clearControls(groupBoxZabieg);
+				refreshDGVZabiegi();
+			}
+		}
+
+		private: System::Void dataGridViewZabiegi_CellClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+			if (e->RowIndex >= 0) {
+				zabiegRekord_id = Convert::ToInt32(dataGridViewZabiegi->Rows[e->RowIndex]->Cells[0]->Value);
+				textBoxZabieg->Text = dataGridViewZabiegi->Rows[e->RowIndex]->Cells[1]->Value->ToString();
+				textBoxCena->Text = dataGridViewZabiegi->Rows[e->RowIndex]->Cells[2]->Value->ToString();
+				textBoxCzasTrwania->Text = dataGridViewZabiegi->Rows[e->RowIndex]->Cells[3]->Value->ToString();
+				richTextBoxOpis->Text = dataGridViewZabiegi->Rows[e->RowIndex]->Cells[4]->Value->ToString();
+				buttonEditZabieg->Visible = true;
+				buttonDeleteZabieg->Visible = true;
+			}
+		}
+
+		private: System::Void refreshDGVZabiegi() {
+			MySqlConnection^ connection = gcnew MySqlConnection(connectionString);
+			String^ query = "select procedure_id, procedure_name as Nazwa, procedure_price as Cena, procedure_duration as 'Czas trwania', procedure_description as Opis "
+				"from przychodnia.procedure ";
+			MySqlCommand^ queryExec = gcnew MySqlCommand(query, connection);
+			try {
+				connection->Open();
+				MySqlDataAdapter^ adapter = gcnew MySqlDataAdapter();
+				adapter->SelectCommand = queryExec;
+				DataTable^ dt = gcnew DataTable();
+				adapter->Fill(dt);
+				BindingSource^ source = gcnew BindingSource();
+				source->DataSource = dt;
+				dataGridViewZabiegi->DataSource = source;
+			}
+			catch (Exception^ ex) {
+				MessageBox::Show(ex->Message);
+			}
+			finally {
+				connection->Close();
+			}
+			dataGridViewZabiegi->Columns[0]->Visible = false;
 		}
 	};
 }
